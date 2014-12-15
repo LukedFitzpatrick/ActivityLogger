@@ -67,8 +67,8 @@ def convertInputToData(timeStamp, comment):
     Returns string with the correct data folder formatted data.
     """
     words = timeStamp.split()
-    timestamp1 = datetime.now() - timedelta(hours = int(words[0]))
-    timestamp2 = datetime.now() - timedelta(hours = int(words[2]))
+    timestamp1 = datetime.now() - timedelta(minutes = int(words[0]))
+    timestamp2 = datetime.now() - timedelta(minutes = int(words[2]))
     
     data = str(timestamp1) + "," + str(timestamp2) + "," + comment
     return data
