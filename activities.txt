@@ -1,3 +1,4 @@
+doremimusic
 bible
 church
 ytmaths
@@ -5,3 +6,4 @@ ytcomputing
 ythistory
 maths
 eat
+design

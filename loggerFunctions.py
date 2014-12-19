@@ -29,9 +29,14 @@ def validateActivityName(name):
     #all of the names in the file are lowercase, the names are not case sensitive.
     if name.lower() in loadActivities():
         return True
+    elif name.lower() == "add":
+        return True
     else:
         return False
-    
+
+def validateNewActivityName(name):
+    return True
+        
 def validateTimestamp(timeStamp):
     """
     Takes a user provided timeStamp and verifies that it follows the correct format.
@@ -93,3 +98,10 @@ def getValidatedInput(message, validationFunction):
         valid = validationFunction(value)
     
     return value
+
+def addActivity(name):
+    writeDataToFile(name, "")
+    with open("activities.txt", 'a') as file:
+        file.write("\n")
+        file.write(name)
+        file.write("\n")
